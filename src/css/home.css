@@ -1,0 +1,21 @@
+.header{
+    text-align: center;
+}
+
+.home_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.profile_pic{
+    max-width: 250px;
+    max-height: 250px;
+    border-radius: 50%;
+}
+
+h5{
+    text-align: justify;
+}
