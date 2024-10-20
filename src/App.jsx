@@ -13,6 +13,7 @@ function App() {
     document.querySelector('#'+activeModule).classList.remove('active');
     document.querySelector('#'+module).classList.add('active');
     setActiveModule(module);
+    setNavbarStatus(false);
   }
 
   const openNavbar = () => {
