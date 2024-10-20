@@ -5,7 +5,7 @@
 }
 
 .sidebar{
-    height: 100vh;
+    min-height: 100%;
     background-color: #1C3D5A;
     padding-top: 50px;
 }
@@ -48,4 +48,39 @@
 
 .active::after{
     content: none;
+}
+
+
+
+/* Media queries*/
+
+@media only screen and (max-width: 576px){
+    .small_sidebar{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .sidebar{
+        width: 90%;
+        position: absolute;
+        z-index: 2;
+    }
+
+    .close_navbar_btn{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        color: white;
+    }
+
+    .closedNav{
+        transform: translateX(-100%);
+        transition: 0.5s
+    }
+
+    .openNav{
+        transform: translatex(0);
+        transition: 0.5s;
+    }
 }

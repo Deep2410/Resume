@@ -7,6 +7,7 @@ import Projects from './components/projects';
 
 function App() {
   const [activeModule, setActiveModule] = useState('home');
+  const [navbarStatus, setNavbarStatus] = useState(false);
 
   const setActive = (module) => {
     document.querySelector('#'+activeModule).classList.remove('active');
@@ -14,11 +15,28 @@ function App() {
     setActiveModule(module);
   }
 
+  const openNavbar = () => {
+    setNavbarStatus(true);
+  }
+
+  const closeNavbar = () => {
+    setNavbarStatus(false);
+  }
+
   return (
     <>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-sm-3 sidebar">
+          <div className={`small_sidebar`}>
+            <div className="small-left">
+              <h4>Deep Prajapati</h4>
+            </div>
+            <div className="small-right">
+              <div className="btn btn-primary" onClick={openNavbar}>Navbar</div>
+            </div>
+          </div>
+          <div className={`col-sm-3 sidebar ${navbarStatus ? 'openNav' : 'closedNav' }`}>
+            <div className={`close_navbar_btn ${navbarStatus ? 'openNav' : 'closedNav'}`} onClick={closeNavbar}>Close</div>
             <div className="heading-container">
               <h1 className='heading'>Deep Prajapati</h1>
               <p className='subheading'>Full Stack Developer</p>
