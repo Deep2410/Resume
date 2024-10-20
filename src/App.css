@@ -5,7 +5,7 @@
 }
 
 .sidebar{
-    min-height: 100%;
+    min-height: 100vh;
     background-color: #1C3D5A;
     padding-top: 50px;
 }
@@ -50,6 +50,16 @@
     content: none;
 }
 
+/* display none for the small sidebar */
+
+.small_sidebar{
+    display: none;
+}
+
+.close_navbar_btn{
+    display: none;
+}
+
 
 
 /* Media queries*/
@@ -82,5 +92,9 @@
     .openNav{
         transform: translatex(0);
         transition: 0.5s;
+    }
+
+    .close_navbar_btn{
+        display: block;
     }
 }
