@@ -7,7 +7,8 @@ function Resume(){
             <div className="container mt-5">
                 <div className="text-center mb-5">
                     <h1>Deep Prajapati</h1>
-                    <p>dm.prajapati8585@gmail.com | +1 (437) 335-2299</p>
+                    <p className='m-0'>dm.prajapati8585@gmail.com</p>
+                    <p className=''>+1 (437) 335-2299</p>
                     <p>
                     <a href="https://linkedin.com/in/deep-prajapati-171874155/" target="_blank" rel="noopener noreferrer">
                         LinkedIn

@@ -44,24 +44,37 @@ function App() {
             </div>
 
             <div className="sections-container">
-              <div className="row ">
+              <div className="row mt-2 section p-2 active" id='home' onClick={() => setActive('home')}>
+                <div className="col-1">
+                  <i className="bi bi-person-circle"></i>
+                </div>
                 <div className="col">
-                  <h5 className='section p-2 active' id='home' onClick={() => setActive('home')}>Home</h5>  
+                  <h5 className=''>About Me</h5>  
                 </div>  
               </div>  
-              <div className="row mt-2">
+              <div className="row mt-2 section p-2" id='resume' onClick={() => setActive('resume')}>
+                <div className="col-1">
+                  <i className="bi bi-file-earmark-person"></i>
+                </div>
                 <div className="col">
-                  <h5 className='section p-2' id='resume' onClick={() => setActive('resume')} >Resume</h5>  
+                  <h5 className=''>Resume</h5>  
                 </div>  
               </div>  
-              <div className="row mt-2">
+              
+              <div className="row mt-2 section p-2" id='projects' onClick={() => setActive('projects')}>
+                <div className="col-1">
+                  <i className="bi bi-file-earmark-code"></i>
+                </div>
                 <div className="col">
-                  <h5 className='section p-2' id='projects' onClick={() => setActive('projects')}>Projects</h5>  
+                  <h5 className=''>Projects</h5>  
                 </div>  
               </div>  
-              <div className="row mt-2">
+              <div className="row mt-2 section p-2" id='contact' onClick={() => setActive('contact')}>
+                <div className="col-1">
+                  <i class="bi bi-envelope-at"></i>
+                </div>
                 <div className="col">
-                  <h5 className='section p-2' id='contact' onClick={() => setActive('contact')}>Contact Information</h5>  
+                  <h5 className='' >Contact Me</h5>  
                 </div>  
               </div>  
                 
