@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
-import '../css/contact.css'
+import React, { useState } from 'react';
+import axios from 'axios';
+import '../css/contact.css';
 
 function Contact(){
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [name, setName] = useState('');
-    const [subject, setSubjct] = useState('');
+    // const [subject, setSubjct] = useState('');
 
     const[receivingEmail, setReceivingEmail] = useState('dm.prajapati8585@gmail.com');
 
@@ -21,8 +22,26 @@ function Contact(){
         setMessage(e.target.value);
     }
 
-    const handleSubject = (e) => {
-        setSubjct(e.target.vlaue);
+    // const handleSubject = (e) => {
+    //     setSubjct(e.target.vlaue);
+    // }
+
+    const sendEmail = async() => {
+        try{
+            const response = await axios.post('http://localhost:8000/send-email', {name,email,message});
+            
+
+            if(response.status === 200){
+                alert('Email sent sucscessfully');
+                setEmail('');
+                setMessage('');
+                setName('')
+            }
+        }
+        catch(error){
+            console.error('Error in sending email'+ error);
+            alert('there is a problem in sending email');
+        }
     }
 
 
@@ -60,14 +79,14 @@ function Contact(){
                                 onChange={handleEmail}
                             />
 
-                            <label htmlFor="subject" className="form-label mt-4">Subject of the email</label>
+                            {/* <label htmlFor="subject" className="form-label mt-4">Subject of the email</label>
                             <input type='text' 
                                 id='subject' 
                                 placeholder='Subject of the email' 
                                 className='form-control'
                                 value={subject}
                                 onChange={handleSubject}
-                            />
+                            /> */}
 
                             <label htmlFor="message" className="form-label mt-4">Enter Message</label>
                             <textarea type='text' 
@@ -79,7 +98,7 @@ function Contact(){
                                 onChange={handleMessage}
                             />
 
-                            <div className="btn btn-primary mt-5 "> Send Email</div>
+                            <div className="btn btn-primary mt-5" onClick={sendEmail}> Send Email</div>
 
                         </div>
                     </div>
@@ -87,7 +106,7 @@ function Contact(){
                         <h3>You are sending an email to </h3>
                         <p className='mb-0'>Deep Prajapati</p>
                         <p className='mb-0'>dm.prajapati8585@gmail.com</p>
-                        <p>Contact Number: +1 (437) 335-    2299</p>
+                        <p>Contact Number: +1 (437) 335-2299</p>
                     </div>
                     
                 </div>
