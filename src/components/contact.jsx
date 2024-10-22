@@ -28,8 +28,9 @@ function Contact(){
 
     const sendEmail = async() => {
         try{
-            const response = await axios.post('http://localhost:8000/send-email', {name,email,message});
-            
+            const response = await axios.post('https://resume-backend-9i7r.onrender.com', {name,email,message});
+            // https://resume-backend-9i7r.onrender.com
+            // http://localhost:8000/send-email
 
             if(response.status === 200){
                 alert('Email sent sucscessfully');
