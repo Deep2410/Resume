@@ -1,0 +1,14 @@
+.resume_container{
+    margin: 40px;
+    width: auto;
+    padding: 50px;
+}
+
+@media only screen and (max-width:576px){
+    .resume_container{
+        margin: 10px;
+        width: auto;
+        padding: 10px;
+    }
+
+}

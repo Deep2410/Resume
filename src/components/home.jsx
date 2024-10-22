@@ -4,7 +4,7 @@ import profile from '../assets/Profile_croped.jpg';
 
 function Home(){
     return(
-        <div className='home_container'>
+        <div className='home_container card pt-5'>
             <div className="container">
                 <div className="header">
                     <img src={profile} className='profile_pic' alt="Profile photo" />

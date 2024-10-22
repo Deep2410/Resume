@@ -1,4 +1,29 @@
+.contact-container{
+    margin: 40px;
+    width: auto;
+    padding: 50px;
+}
+
+.loading-text-container{
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.loading-text-container p{
+    margin: 0;
+}
+
+.loading-text{
+    margin-left: 10px;
+}
+
 @media only screen and (max-width:576px){
+    .contact-container{
+        margin: 20px;
+        width: auto;
+        padding: 20px;
+    }
     .rightside_contact{
         margin-top: 50px;
     }

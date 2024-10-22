@@ -6,8 +6,8 @@ function Contact(){
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [name, setName] = useState('');
+    const [emailInProgress, setEmailInProgress] = useState(false);
     
-
     const[receivingEmail, setReceivingEmail] = useState('dm.prajapati8585@gmail.com');
 
     const handleName = (e) => {
@@ -22,35 +22,40 @@ function Contact(){
         setMessage(e.target.value);
     }
 
-    // const handleSubject = (e) => {
-    //     setSubjct(e.target.vlaue);
-    // }
-
     const sendEmail = async() => {
-        try{
-            const response = await axios.post('https://resume-backend-9i7r.onrender.com/send-email', {name,email,message});
-            // https://resume-backend-9i7r.onrender.com
-            // http://localhost:8000/send-email
 
-            if(response.status === 200){
-                alert('Email sent sucscessfully');
-                setEmail('');
-                setMessage('');
-                setName('')
-            }
+        if(email === '' && message === '' && name === ''){
+            alert('Please fill all the details of the Form');
         }
-        catch(error){
-            console.error('Error in sending email'+ error);
-            alert('there is a problem in sending email');
+        else{
+            try{
+                setEmailInProgress(true);
+                const response = await axios.post('https://resume-backend-9i7r.onrender.com/send-email', {name,email,message});
+                // https://resume-backend-9i7r.onrender.com/send-email
+                // http://localhost:8000/send-email
+    
+                if(response.status === 200){
+                    alert('Email sent sucscessfully');
+                    setEmail('');
+                    setMessage('');
+                    setName('')
+                }
+            }
+            catch(error){
+                console.error('Error in sending email'+ error);
+                alert('there is a problem in sending email');
+            }
+    
+            setEmailInProgress(false);
         }
     }
 
 
     return(
         <>
-            <div className="container">
+            <div className="container card contact-container">
                 <div className="row">
-                    <h1 className='text-center mt-5'>Contact Me</h1>
+                    <h1 className='text-center '>Contact Me</h1>
                 </div>
 
                 <div className="row mt-2">
@@ -80,15 +85,6 @@ function Contact(){
                                 onChange={handleEmail}
                             />
 
-                            {/* <label htmlFor="subject" className="form-label mt-4">Subject of the email</label>
-                            <input type='text' 
-                                id='subject' 
-                                placeholder='Subject of the email' 
-                                className='form-control'
-                                value={subject}
-                                onChange={handleSubject}
-                            /> */}
-
                             <label htmlFor="message" className="form-label mt-4">Enter Message</label>
                             <textarea type='text' 
                                 id='message' 
@@ -98,8 +94,19 @@ function Contact(){
                                 rows = "5"
                                 onChange={handleMessage}
                             />
+                            {
+                                emailInProgress ?
+                                (
+                                    <div className='mt-5 loading-text-container'>
+                                        <div class="spinner-border text-primary" role="status">
+                                            <span class="sr-only"></span>
+                                        </div>
+                                        <div className='loading-text'><p>Sending Email...</p></div>
+                                    </div>
+                                     ) : (<div className="btn btn-primary mt-5" onClick={sendEmail}> Send Email</div>)
+                                } 
 
-                            <div className="btn btn-primary mt-5" onClick={sendEmail}> Send Email</div>
+                            
 
                         </div>
                     </div>

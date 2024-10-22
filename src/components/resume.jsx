@@ -1,10 +1,11 @@
 import React from 'react'
 import ResumePath from '../assets/Resume.pdf'
+import '../css/resume.css'
 
 function Resume(){
     return(
         <>
-            <div className="container mt-5">
+            <div className="container card resume_container mt-5">
                 <div className="text-center mb-5">
                     <h1>Deep Prajapati</h1>
                     <p className='m-0'>dm.prajapati8585@gmail.com</p>
