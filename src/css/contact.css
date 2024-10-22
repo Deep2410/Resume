@@ -2,12 +2,13 @@
     margin: 40px;
     width: auto;
     padding: 50px;
+    padding-bottom: 40px;
 }
 
 .loading-text-container{
     display: flex;
     align-items: center;
-    margin-bottom: 50px;
+    /* margin-bottom: 30px; */
 }
 
 .loading-text-container p{
@@ -16,6 +17,17 @@
 
 .loading-text{
     margin-left: 10px;
+}
+
+.greeting_container{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    padding: 50px;
+    padding-bottom: 40px;
+    height: 80%;
 }
 
 @media only screen and (max-width:576px){
