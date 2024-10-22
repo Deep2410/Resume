@@ -6,7 +6,7 @@ function Contact(){
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [name, setName] = useState('');
-    // const [subject, setSubjct] = useState('');
+    
 
     const[receivingEmail, setReceivingEmail] = useState('dm.prajapati8585@gmail.com');
 
