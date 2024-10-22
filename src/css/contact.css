@@ -20,11 +20,13 @@
 
 @media only screen and (max-width:576px){
     .contact-container{
-        margin: 20px;
+        margin: 0px;
         width: auto;
         padding: 20px;
+        padding-top: 50px;
     }
     .rightside_contact{
-        margin-top: 50px;
+        margin-top: 60px;
+        text-align: center;
     }
 }

@@ -6,15 +6,15 @@ function Resume(){
     return(
         <>
             <div className="container card resume_container mt-5">
-                <div className="text-center mb-5">
+                <div className="text-center mb-5 resume_section_1">
                     <h1>Deep Prajapati</h1>
                     <p className='m-0'>dm.prajapati8585@gmail.com</p>
                     <p className=''>+1 (437) 335-2299</p>
                     <p>
-                    <a href="https://linkedin.com/in/deep-prajapati-171874155/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://linkedin.com/in/deep-prajapati-171874155/" target="_blank">
                         LinkedIn
                     </a> |{' '}
-                    <a href="https://github.com/Deep2410" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/Deep2410" target="_blank">
                         GitHub
                     </a>
                     </p>
@@ -51,8 +51,8 @@ function Resume(){
                             <h5 className="card-title">Front End Developer | Alian Software, Anand, Gujarat, India</h5>
                             <h6 className="card-subtitle mb-2 text-muted">September 2022 – March 2023</h6>
                             <ul>
-                            <li>Delivered responsive, reusable web components using React.js and Bootstrap, achieving a 30% reduction in load times and a 15% increase in user engagement.</li>
-                            <li>Customized WordPress websites, leading to a 20% increase in site traffic and a 25% boost in conversion rates for e-commerce clients.</li>
+                                <li>Delivered responsive, reusable web components using React.js and Bootstrap, achieving a 30% reduction in load times and a 15% increase in user engagement.</li>
+                                <li>Customized WordPress websites, leading to a 20% increase in site traffic and a 25% boost in conversion rates for e-commerce clients.</li>
                             <li>Presented technical solutions and project updates to clients, improving client satisfaction by 40%.</li>
                             </ul>
                         </div>
@@ -63,21 +63,21 @@ function Resume(){
                             <h6 className="card-subtitle mb-2 text-muted">October 2021 – June 2022</h6>
                             <ul>
                             <li>Designed and implemented front end components using React.js, optimizing site functionality and enhancing user interaction.</li>
-                            <li>Increased site load speed by 20% through responsive UI/UX optimization.</li>
-                            <li>Collaborated with team members to resolve issues and present progress during weekly reviews.</li>
+                                <li>Increased site load speed by 20% through responsive UI/UX optimization.</li>
+                                <li>Collaborated with team members to resolve issues and present progress during weekly reviews.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <div className="mb-5">
+                <div className="mb-0">
                     <h2>Projects</h2>
                     <div className="card mb-3">
                         <div className="card-body">
                             <h5 className="card-title">E-commerce Website using React.js and Bootstrap</h5>
                             <ul>
-                            <li>Developed a fully responsive e-commerce platform with key features like product management and cart functionality.</li>
-                            <li>Utilized React hooks for state management and performance optimization, achieving a 90% PageSpeed score and a 15% increase in user engagement.</li>
+                                <li>Developed a fully responsive e-commerce platform with key features like product management and cart functionality.</li>
+                                <li>Utilized React hooks for state management and performance optimization, achieving a 90% PageSpeed score and a 15% increase in user engagement.</li>
                             </ul>
                         </div>
                     </div>
@@ -85,8 +85,8 @@ function Resume(){
                         <div className="card-body">
                             <h5 className="card-title">To-Do List Application</h5>
                             <ul>
-                            <li>Developed a task management app in React.js with real-time task updates like add, edit, delete, and mark as complete.</li>
-                            <li>Integrated Node.js and MongoDB for secure user authentication and task management.</li>
+                                <li>Developed a task management app in React.js with real-time task updates like add, edit, delete, and mark as complete.</li>
+                                <li>Integrated Node.js and MongoDB for secure user authentication and task management.</li>
                             </ul>
                         </div>
                     </div>

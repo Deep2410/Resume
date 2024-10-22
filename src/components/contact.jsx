@@ -24,7 +24,7 @@ function Contact(){
 
     const sendEmail = async() => {
 
-        if(email === '' && message === '' && name === ''){
+        if(email === '' || message === '' || name === ''){
             alert('Please fill all the details of the Form');
         }
         else{
