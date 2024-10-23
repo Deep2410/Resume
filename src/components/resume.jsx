@@ -5,7 +5,8 @@ import '../css/resume.css';
 function Resume() {
     return (
         <>
-            <div className="container card resume_container mt-5 p-5 shadow-lg">
+            <div className="container card shadow-lg resume_container">
+                
                 <div className="text-center mb-4 resume_section_1">
                     <h1 className="fw-bold">Deep Prajapati</h1>
                     <p className='m-0'>dm.prajapati8585@gmail.com</p>
@@ -16,6 +17,13 @@ function Resume() {
                         </a> |{' '}
                         <a href="https://github.com/Deep2410" target="_blank" className="text-decoration-none ms-2">
                             <i className="fab fa-github"></i> GitHub
+                        </a> |{' '}
+                        <a
+                            href={ResumePath}
+                            download
+                            className="text-decoration-none ms-2"
+                        >
+                            Download
                         </a>
                     </p>
                 </div>
@@ -83,7 +91,7 @@ function Resume() {
                         </div>
                     </div>
 
-                    <div className="card mb-3 shadow-sm">
+                    <div className="card shadow-sm">
                         <div className="card-body">
                             <h5 className="card-title fw-bold">To-Do List Application</h5>
                             <ul>
@@ -93,17 +101,6 @@ function Resume() {
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div className="text-center mb-5">
-                <h2>Download My Resume</h2>
-                <a
-                    href={ResumePath}
-                    download
-                    className="btn btn-primary mt-3"
-                >
-                    Download Resume
-                </a>
             </div>
         </>
     );

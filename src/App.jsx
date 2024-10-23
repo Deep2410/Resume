@@ -28,20 +28,19 @@ function App() {
     <>
       <div className="container-fluid">
         <div className="row">
-          {/* Small Sidebar with Hamburger Icon */}
+          {/* Mobile device navabar */}
           <div className="small_sidebar">
             <div className="small-left">
               <h4>Deep Prajapati</h4>
             </div>
             <div className="small-right">
               <div className="navbar-toggle-icon" onClick={openNavbar}>
-                {/* Hamburger Icon */}
                 <i className="bi bi-list"></i>
               </div>
             </div>
           </div>
           <div className={`col-sm-3 sidebar ${navbarStatus ? 'openNav' : 'closedNav'}`}>
-            <div className="close_navbar_btn" onClick={closeNavbar}>Close</div>
+            <div className="close_navbar_btn" onClick={closeNavbar}><i class="bi bi-x-lg"></i></div>
             <div className="heading-container">
               <h1 className="heading">Deep Prajapati</h1>
               <p className="subheading">Full Stack Developer</p>
@@ -65,7 +64,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="col-sm-9">
+          <div className="col-sm-9 components_container">
             {activeModule === 'contact' && <Contact />}
             {activeModule === 'home' && <Home />}
             {activeModule === 'resume' && <Resume />}

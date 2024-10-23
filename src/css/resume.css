@@ -1,6 +1,17 @@
 .resume_container {
     border-radius: 10px;
     background-color: #f9f9f9;
+    position: relative;
+    width: 90%;
+    padding: 50px;
+    padding-bottom: 0;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.download_resume{
+    position: absolute;
+    right: 50px;
 }
 
 .resume_section_1 h1 {
@@ -22,7 +33,9 @@
 
 @media only screen and (max-width: 576px) {
     .resume_container {
-        padding: 20px;
+        width: 99%;
+        padding: 25px;
+        margin-top: 25px;
     }
 
     .resume_section_1 {
