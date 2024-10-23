@@ -1,112 +1,105 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Nunito';
+    font-family: 'Nunito', sans-serif;
 }
 
-.sidebar{
+.sidebar {
     min-height: 100vh;
     background-color: #1C3D5A;
-    padding-top: 50px;
+    padding: 40px 20px;
+    transition: all 0.3s ease;
 }
 
-.heading, .subheading{
+.heading, .subheading {
     color: white;
     text-align: center;
 }
 
-.sections-container{
-    margin-top: 80px;
+.sections-container {
+    margin-top: 50px;
 }
 
-.section{
+.section {
     color: #E6E6E6;
     align-items: center;
-    
-}
-h5{
-    margin-bottom: 0;
-    /* font-size: 16px; */
-}
-
-.section:hover{
-    background-color: white;
-    color: black;
-    transition: 0.25s;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px;
 }
 
-.section::after{
-    display: block;
-    width: 100%;
-    margin-left: auto;
-    height: 2px;
-    margin-bottom: 2px;
-    background-color: white;
-    content: "";
+.section:hover {
+    background-color: #ffffff;
+    color: #1C3D5A;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.active{
-    /* margin-bottom: 8px; */
-    padding: 4px 0 6px 0;
+.active {
     background-color: #E6E6E6;
-    color: black;    
+    color: #1C3D5A;
+    font-weight: bold;
 }
 
-.active::after{
-    content: "";
-    background-color: #E6E6E6;
-    transition: 0.25s;
-    
-}
-.active:hover::after{
+.active:hover {
     background-color: #FFFFFF;
+    color: #1C3D5A;
 }
- 
-/* display none for the small sidebar */
 
-.small_sidebar{
+/* Mobile Sidebar and Navbar */
+.small_sidebar {
     display: none;
 }
 
-.close_navbar_btn{
+.close_navbar_btn {
     display: none;
 }
 
-
-
-/* Media queries*/
-
-@media only screen and (max-width: 576px){
-    .small_sidebar{
+@media only screen and (max-width: 576px) {
+    .small_sidebar {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding: 10px;
+        background-color: #1C3D5A;
+        color: white;
+        width: 100%;
     }
 
-    .sidebar{
-        width: 90%;
+    .navbar-toggle-icon {
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .sidebar {
+        width: 70%;
         position: absolute;
-        z-index: 2;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        transition: transform 0.5s ease;
     }
 
-    .close_navbar_btn{
+    .openNav {
+        transform: translateX(0);
+    }
+
+    .closeNav {
+        transform: translateX(-100%);
+    }
+
+    .close_navbar_btn {
+        display: block;
+        color: white;
         position: absolute;
         top: 15px;
         right: 15px;
-        color: white;
-    }
-
-    .closedNav{
-        transform: translateX(-100%);
-        transition: 0.5s
-    }
-
-    .openNav{
-        transform: translatex(0);
-        transition: 0.5s;
-    }
-
-    .close_navbar_btn{
-        display: block;
+        background-color: #1C3D5A;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
     }
 }

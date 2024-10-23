@@ -8,7 +8,7 @@
 .loading-text-container{
     display: flex;
     align-items: center;
-    /* margin-bottom: 30px; */
+    margin-bottom: 30px;
 }
 
 .loading-text-container p{
