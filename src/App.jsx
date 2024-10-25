@@ -4,7 +4,7 @@ import Contact from './components/contact';
 import Home from './components/home';
 import Resume from './components/resume';
 import Projects from './components/projects';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Authentication from './components/Authentication';
 
 function App() {
@@ -50,19 +50,19 @@ function App() {
               <p className="subheading">Full Stack Developer</p>
             </div>
             <div className="sections-container">
-              <Link className="row mt-2 section p-2 active" id="home" to= '/Resume/' onClick={() => setActive('home')}>
+              <Link className="row mt-2 section p-2 active" id="home" to= '/' onClick={() => setActive('home')}>
                 <div className="col-1"><i className="bi bi-person-circle"></i></div>
                 <div className="col"><h5>About Me</h5></div>
               </Link>
-              <Link className="row mt-2 section p-2" id="resume" to= '/Resume/resume' onClick={() => setActive('resume')}>
+              <Link className="row mt-2 section p-2" id="resume" to= '/resume' onClick={() => setActive('resume')}>
                 <div className="col-1"><i className="bi bi-file-earmark-person"></i></div>
                 <div className="col"><h5>Resume</h5></div>
               </Link>
-              <Link className="row mt-2 section p-2" id="projects" to= '/Resume/projects' onClick={() => setActive('projects')}>
+              <Link className="row mt-2 section p-2" id="projects" to= '/projects' onClick={() => setActive('projects')}>
                 <div className="col-1"><i className="bi bi-file-earmark-code"></i></div>
                 <div className="col"><h5>Projects</h5></div>
               </Link>
-              <Link className="row mt-2 section p-2" id="contact" to= '/Resume/contact' onClick={() => setActive('contact')}>
+              <Link className="row mt-2 section p-2" id="contact" to= '/contact' onClick={() => setActive('contact')}>
                 <div className="col-1"><i className="bi bi-envelope-at"></i></div>
                 <div className="col"><h5>Contact Me</h5></div>
               </Link>
@@ -70,11 +70,11 @@ function App() {
           </div>
           <div className="col-sm-9 components_container">
             <Routes>
-              <Route path='/Resume/' element={<Home />} />
-              <Route path='/Resume/resume' element = {<Resume />} />
-              <Route path='/Resume/projects' element = {<Projects />} />
-              <Route path='/Resume/contact' element = {<Contact />} />
-              <Route path='/Resume/projects/auth' element = {<Authentication />} />
+              <Route path='/' element={<Home />} />
+              <Route path='/resume' element = {<Resume />} />
+              <Route path='/projects' element = {<Projects />} />
+              <Route path='/contact' element = {<Contact />} />
+              <Route path='/projects/auth' element = {<Authentication />} />
             </Routes>
 
           </div>
