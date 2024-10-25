@@ -1,20 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Contact from './components/contact';
 import Home from './components/home';
 import Resume from './components/resume';
 import Projects from './components/projects';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Authentication from './components/Authentication';
 
 function App() {
-  const [activeModule, setActiveModule] = useState('home');
   const [navbarStatus, setNavbarStatus] = useState(false);
-
-  const setActive = (module) => {
-    document.querySelector('#'+activeModule).classList.remove('active');
-    document.querySelector('#'+module).classList.add('active');
-    setActiveModule(module);
-    setNavbarStatus(false);
-  };
+  const [activeSection, setActiveSection] = useState('home');
 
   const openNavbar = () => {
     setNavbarStatus(true);
@@ -24,8 +19,17 @@ function App() {
     setNavbarStatus(false);
   };
 
+  const setActive = (activestate) => {
+    document.querySelector('#'+activeSection).classList.remove('active');
+    setActiveSection(activestate);
+    document.querySelector('#'+activestate).classList.add('active');
+    closeNavbar();
+  }
+
+
   return (
     <>
+    <Router>
       <div className="container-fluid">
         <div className="row">
           {/* Mobile device navabar */}
@@ -46,32 +50,37 @@ function App() {
               <p className="subheading">Full Stack Developer</p>
             </div>
             <div className="sections-container">
-              <div className="row mt-2 section p-2 active" id="home" onClick={() => setActive('home')}>
+              <Link className="row mt-2 section p-2 active" id="home" to= '/Resume/' onClick={() => setActive('home')}>
                 <div className="col-1"><i className="bi bi-person-circle"></i></div>
                 <div className="col"><h5>About Me</h5></div>
-              </div>
-              <div className="row mt-2 section p-2" id="resume" onClick={() => setActive('resume')}>
+              </Link>
+              <Link className="row mt-2 section p-2" id="resume" to= '/Resume/resume' onClick={() => setActive('resume')}>
                 <div className="col-1"><i className="bi bi-file-earmark-person"></i></div>
                 <div className="col"><h5>Resume</h5></div>
-              </div>
-              {/* <div className="row mt-2 section p-2" id="projects" onClick={() => setActive('projects')}>
+              </Link>
+              <Link className="row mt-2 section p-2" id="projects" to= '/Resume/projects' onClick={() => setActive('projects')}>
                 <div className="col-1"><i className="bi bi-file-earmark-code"></i></div>
                 <div className="col"><h5>Projects</h5></div>
-              </div> */}
-              <div className="row mt-2 section p-2" id="contact" onClick={() => setActive('contact')}>
+              </Link>
+              <Link className="row mt-2 section p-2" id="contact" to= '/Resume/contact' onClick={() => setActive('contact')}>
                 <div className="col-1"><i className="bi bi-envelope-at"></i></div>
                 <div className="col"><h5>Contact Me</h5></div>
-              </div>
+              </Link>
             </div>
           </div>
           <div className="col-sm-9 components_container">
-            {activeModule === 'contact' && <Contact />}
-            {activeModule === 'home' && <Home />}
-            {activeModule === 'resume' && <Resume />}
-            {activeModule === 'projects' && <Projects />}
+            <Routes>
+              <Route path='/Resume/' element={<Home />} />
+              <Route path='/Resume/resume' element = {<Resume />} />
+              <Route path='/Resume/projects' element = {<Projects />} />
+              <Route path='/Resume/contact' element = {<Contact />} />
+              <Route path='/Resume/projects/auth' element = {<Authentication />} />
+            </Routes>
+
           </div>
         </div>
       </div>
+      </Router>
     </>
   );
 }
