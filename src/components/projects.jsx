@@ -3,7 +3,14 @@ import React from 'react'
 function Projects(){
     return(
         <>
-        Project page
+            <div className="container">
+                <div className="row">
+                    <div className="col-sm-6">
+                        
+                    </div>
+                    <div className="col-sm-6"></div>
+                </div>
+            </div>
         </>
     )
 
