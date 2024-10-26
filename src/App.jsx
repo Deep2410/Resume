@@ -58,10 +58,10 @@ function App() {
                 <div className="col-1"><i className="bi bi-file-earmark-person"></i></div>
                 <div className="col"><h5>Resume</h5></div>
               </Link>
-              <Link className="row mt-2 section p-2" id="projects" to= '/projects' onClick={() => setActive('projects')}>
+              {/* <Link className="row mt-2 section p-2" id="projects" to= '/projects' onClick={() => setActive('projects')}>
                 <div className="col-1"><i className="bi bi-file-earmark-code"></i></div>
                 <div className="col"><h5>Projects</h5></div>
-              </Link>
+              </Link> */}
               <Link className="row mt-2 section p-2" id="contact" to= '/contact' onClick={() => setActive('contact')}>
                 <div className="col-1"><i className="bi bi-envelope-at"></i></div>
                 <div className="col"><h5>Contact Me</h5></div>
