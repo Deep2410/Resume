@@ -175,7 +175,7 @@ function AppContent() {
                   <h5>Resume</h5>
                 </div>
               </Link>
-              <Link 
+              {/* <Link 
                 className={`row mt-2 section p-2 ${activeSection === 'projects' ? 'active' : ''}`}
                 id="projects"
                 to="/projects"
@@ -187,7 +187,7 @@ function AppContent() {
                 <div className="col">
                   <h5>Projects</h5>
                 </div>
-              </Link>
+              </Link> */}
               <Link
                 className={`row mt-2 section p-2 ${activeSection === 'contact' ? 'active' : ''}`}
                 id="contact"
