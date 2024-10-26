@@ -1,0 +1,9 @@
+.form_container{
+    width: 100%;
+    max-width: 400px;
+}
+
+.login_heading{
+    color: #1C3D5A;
+    font-weight: bold;
+}

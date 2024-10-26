@@ -13,7 +13,7 @@ function Projects(){
                 <div className="row projects_row">
                     <div className="col-sm-6">
                         <div className="container-fluid card shadow-sm project_card">
-                            <p><Link to='/Resume/Projects/auth'>Authentication Application</Link></p>
+                            <p><Link to='/projects/auth'>Authentication Application</Link></p>
                         </div>
                     </div>                    
                     <div className="col-sm-6">
