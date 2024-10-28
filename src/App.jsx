@@ -94,6 +94,7 @@ import Resume from './components/resume';
 import Projects from './components/projects';
 import {Routes, Route, Link, useLocation } from 'react-router-dom';
 import Authentication from './components/Authentication';
+import Signup from './components/signup';
 
 function App() {
   return (
@@ -175,7 +176,7 @@ function AppContent() {
                   <h5>Resume</h5>
                 </div>
               </Link>
-              {/* <Link 
+              <Link 
                 className={`row mt-2 section p-2 ${activeSection === 'projects' ? 'active' : ''}`}
                 id="projects"
                 to="/projects"
@@ -187,7 +188,7 @@ function AppContent() {
                 <div className="col">
                   <h5>Projects</h5>
                 </div>
-              </Link> */}
+              </Link>
               <Link
                 className={`row mt-2 section p-2 ${activeSection === 'contact' ? 'active' : ''}`}
                 id="contact"
@@ -211,6 +212,7 @@ function AppContent() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/projects/auth" element={<Authentication />} />
               <Route path="*" element={<div>Page Not Found</div>} />
+              <Route path='/projects/auth/signup' element = {<Signup />}/>
             </Routes>
           </div>
         </div>

@@ -56,7 +56,7 @@ function Contact() {
                     <h1 className='text-center'>Thank you for contacting me!</h1>
                 </div>
             ) : (
-                <div className="container card contact-container shadow-lg p-5">
+                <div className="container card contact-container shadow-lg">
                     <div className="row">
                         <h1 className='text-center'>Contact Me</h1>
                     </div>
@@ -67,7 +67,7 @@ function Contact() {
                         </h6>
                     </div>
 
-                    <div className="row mt-5 d-flex align-items-center">
+                    <div className="row mt-3 d-flex align-items-center">
                         <div className="col-lg-6 mb-4 mb-lg-0">
                             <div className="form p-4 rounded shadow-sm bg-light">
                                 <h3 className='mb-4'>Send Me a Message</h3>

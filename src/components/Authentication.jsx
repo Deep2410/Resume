@@ -1,12 +1,13 @@
 import React, {useState, useEffect} from 'react';
 import '../css/authentication.css'
+import {Link } from 'react-router-dom';
 
 function Authentication() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     const login = () => {
-        
+
     }
 
     return(
@@ -43,7 +44,7 @@ function Authentication() {
                             <button type="button" onClick={login} className="btn btn-primary">Login</button>
                         </div>
                         <div className="mt-3 text-center">
-                            <a href="" className="text-decoration-none">New User? Register here</a>
+                            <Link to="/projects/auth/signup" className="text-decoration-none">New User? Register here</Link>
                         </div>
                     </form>
                 </div>

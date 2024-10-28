@@ -1,0 +1,19 @@
+.red{
+    color: red;
+}
+
+.green{
+    color: green;
+}
+
+.signup_form_container{
+    min-height: 100vh;
+    padding: 50px;
+}
+
+@media only screen and (max-width: 576px){
+    .signup_form_container{
+        min-height: auto;
+        padding: 20px;
+    }
+}
