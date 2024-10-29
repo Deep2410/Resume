@@ -16,7 +16,7 @@ function Signup() {
             try{
                 setMessage('');
                 setStatusCode(0);
-                const response = await axios.post('http://localhost:8000/signup', {name,email,password});
+                const response = await axios.post('https://resume-backend-9i7r.onrender.com/signup', {name,email,password});
                 console.log(`server response: ${response.data.message}`);
                 setMessage(response.data.message);
                 setStatusCode(response.status);
@@ -28,7 +28,6 @@ function Signup() {
             catch(error){
                 console.error(`error in sending data: ${error}`);
                 setMessage(error.response.data.error);
-                
             }
         }
         else{
