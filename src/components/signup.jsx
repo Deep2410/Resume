@@ -10,12 +10,15 @@ function Signup() {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [message, setMessage] = useState('')
     const [statusCode, setStatusCode] = useState(0);
+    const [inProgress, setInProgress] = useState(false);
 
     const signUp = async () => {
+        setInProgress(true)
         if(password === confirmPassword){
             try{
                 setMessage('');
                 setStatusCode(0);
+                // https://resume-backend-9i7r.onrender.com/signup
                 const response = await axios.post('https://resume-backend-9i7r.onrender.com/signup', {name,email,password});
                 console.log(`server response: ${response.data.message}`);
                 setMessage(response.data.message);
@@ -27,12 +30,15 @@ function Signup() {
             }
             catch(error){
                 console.error(`error in sending data: ${error}`);
-                setMessage(error.response.data.error);
+                setMessage(error.response.data.message);
             }
+            
         }
+        
         else{
             alert('Your password is not matching');
         }
+        setInProgress(false);
     };
 
     return (
@@ -95,7 +101,17 @@ function Signup() {
                         />
                     </div>
                     <div className="d-grid">
-                        <button type="button" onClick={signUp} className="btn btn-primary">Sign Up</button>
+                        {
+                            inProgress ? 
+                            <div className="loading-container">
+                                <div class="spinner-border" role="status">
+                                </div>
+                                <p>Creating an account...</p>
+                            </div>
+                              : 
+                            <button type="button" onClick={signUp} className="btn btn-primary">Sign Up</button>
+                        }
+                        
                     </div>
                     <div className="mt-3 text-center">
                         <Link to="/projects/auth" className="text-decoration-none">Already have an account? Login here</Link>
