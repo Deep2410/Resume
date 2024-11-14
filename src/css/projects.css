@@ -18,3 +18,23 @@
     margin: 0;
     text-align: center;
 }
+
+.project_link{
+    text-decoration: none;
+    color: black;
+}
+
+.project_name{
+    display: flex;
+    justify-content: space-around;
+}
+
+.bi-person-fill-lock{
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 576px){
+    .display-small{
+        margin-top: 30px;
+    }
+}

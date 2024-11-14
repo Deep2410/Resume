@@ -38,7 +38,7 @@ function Authentication() {
             console.log(response.data.message);
         }).catch(error => {
             console.error('Error in useEffect hook: ' + error);
-            setMessage('Error: '+error.response.data.message);
+            setTokenMessage('Error: '+error.response.data.message);
         });
     },[]);
 
