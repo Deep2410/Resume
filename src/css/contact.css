@@ -30,6 +30,11 @@
     height: 80%;
 }
 
+.warning{
+    font-size: 10px;
+    color: gray;
+}
+
 @media only screen and (max-width:576px){
     .contact-container{
         margin: 0px;

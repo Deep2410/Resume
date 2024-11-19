@@ -104,11 +104,17 @@ function Contact() {
                                 />
 
                                 {emailInProgress ? (
-                                    <div className='mt-4 d-flex align-items-center'>
-                                        <div className="spinner-border text-primary" role="status">
-                                            <span className="sr-only"></span>
+                                    <div>
+                                        <div className='mt-4 d-flex align-items-center'>
+                                            <div className="spinner-border text-primary" role="status">
+                                                <span className="sr-only"></span>
+                                            </div>
+                                            <p className='ml-3 mb-0'>Sending Email...</p>
+                                            
                                         </div>
-                                        <p className='ml-3 mb-0'>Sending Email...</p>
+                                        <div>
+                                                <p className='warning'>First time it will take 50 seconds to start the server.</p>
+                                        </div>
                                     </div>
                                 ) : (
                                     <button className="btn btn-primary mt-3 w-100" onClick={sendEmail}>Send Email</button>
