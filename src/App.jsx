@@ -8,6 +8,8 @@ import {Routes, Route, Link, useLocation } from 'react-router-dom';
 import Authentication from './components/Authentication';
 import Signup from './components/signup';
 import Login_home from './components/login_home';
+import TodoLogin from './components/toDoList/login';
+import Todo_home from './components/toDoList/home';
 
 function App() {
   return (
@@ -76,7 +78,7 @@ function AppContent() {
                   <h5>About Me</h5>
                 </div>
               </Link>
-              <Link
+              {/* <Link
                 className={`row mt-2 section p-2 ${activeSection === 'resume' ? 'active' : ''}`}
                 id="resume"
                 to="/resume"
@@ -88,7 +90,7 @@ function AppContent() {
                 <div className="col">
                   <h5>Resume</h5>
                 </div>
-              </Link>
+              </Link> */}
               <Link 
                 className={`row mt-2 section p-2 ${activeSection === 'projects' ? 'active' : ''}`}
                 id="projects"
@@ -127,6 +129,8 @@ function AppContent() {
               <Route path="*" element={<div>Page Not Found</div>} />
               <Route path='/projects/auth/signup' element = {<Signup />}/>
               <Route path="/projects/auth/home" element = {<Login_home />} />
+              <Route path="/projects/todo/login" element = {<TodoLogin />} />
+              <Route path="/projects/todo/home" element = {<Todo_home />} />
             </Routes>
           </div>
         </div>
