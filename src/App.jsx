@@ -8,8 +8,8 @@ import {Routes, Route, Link, useLocation } from 'react-router-dom';
 import Authentication from './components/Authentication';
 import Signup from './components/signup';
 import Login_home from './components/login_home';
-import TodoLogin from './components/toDoList/login';
-import Todo_home from './components/toDoList/home';
+// import TodoLogin from './components/toDoList/login';
+// import Todo_home from './components/toDoList/home';
 
 function App() {
   return (
@@ -129,8 +129,8 @@ function AppContent() {
               <Route path="*" element={<div>Page Not Found</div>} />
               <Route path='/projects/auth/signup' element = {<Signup />}/>
               <Route path="/projects/auth/home" element = {<Login_home />} />
-              <Route path="/projects/todo/login" element = {<TodoLogin />} />
-              <Route path="/projects/todo/home" element = {<Todo_home />} />
+              {/* <Route path="/projects/todo/login" element = {<TodoLogin />} /> */}
+              {/* <Route path="/projects/todo/home" element = {<Todo_home />} /> */}
             </Routes>
           </div>
         </div>
